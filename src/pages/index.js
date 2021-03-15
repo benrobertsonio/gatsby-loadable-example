@@ -1,5 +1,10 @@
 import * as React from "react"
 
+import loadable from '@loadable/component'
+const Hero = loadable(() => import('../components/hero'))
+const Image = loadable(() => import('../components/image'))
+
+
 // styles
 const pageStyles = {
   color: "#232129",
@@ -130,6 +135,8 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
+      <Hero />
+      <Image />
       <h1 style={headingStyles}>
         Congratulations
         <br />
